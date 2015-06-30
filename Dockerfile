@@ -1,6 +1,7 @@
 FROM java:7-jre
 
 RUN mkdir -p /home/spark/job-server
+ADD job-server-extras/target/**/spark-job-server.jar /home/spark/job-server
 ADD bin/* /home/spark/job-server
 ADD config/* /home/spark/job-server
 ADD config/docker.conf /home/spark/job-server/settings.sh
