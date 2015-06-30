@@ -6,4 +6,5 @@ ADD bin/* /home/spark/job-server/
 ADD job-server/config/* /home/spark/job-server/
 ADD job-server/config/docker.sh /home/spark/job-server/settings.sh
 
-CMD /home/spark/job-server/server_start.sh attached
+ENV ATTACHED=true
+CMD /home/spark/job-server/server_start.sh
