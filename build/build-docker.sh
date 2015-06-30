@@ -17,7 +17,10 @@ echo "Tagging old docker images, if exists (to be removed)..."
 docker tag $IMAGE_PREFIX/$IMAGE_NAME:$TAG   $IMAGE_PREFIX/$IMAGE_NAME:old-$TAG || true
 
 echo "Building new docker image..."
-docker build -t $IMAGE_PREFIX/$IMAGE_NAME:$TAG .
+docker build -t $IMAGE_PREFIX/$IMAGE_NAME:latest .
+
+echo "Tagging the newly created image..."
+docker tag $IMAGE_PREFIX/$IMAGE_NAME:latest $IMAGE_PREFIX/$IMAGE_NAME:$TAG
 
 echo "Removing old docker images..."
 docker rmi -f $IMAGE_PREFIX/$IMAGE_NAME:old-$TAG || true
