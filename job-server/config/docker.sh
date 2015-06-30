@@ -14,8 +14,6 @@ DRIVER_MEMORY=1G
 SPARK_VERSION=1.3.1
 SPARK_HOME=${SPARK_HOME:-/home/spark/spark-0.8.0} # TODO: volume # TODO: env
 SPARK_CONF_DIR=$SPARK_HOME/conf
-MESOS_NATIVE_JAVA_LIBRARY=/usr/local/lib/libmesos.so # TODO: volume
-MESOS_NATIVE_LIBRARY=/usr/local/lib/libmesos.so
 
 # Only needed for Mesos deploys
 #SPARK_EXECUTOR_URI=/home/spark/spark-0.8.0.tar.gz

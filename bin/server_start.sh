@@ -77,6 +77,9 @@ fi
 # This needs to be exported for standalone mode so drivers can connect to the Spark cluster
 export SPARK_HOME
 
+export MESOS_NATIVE_JAVA_LIBRARY=/usr/local/lib/libmesos.so # TODO: volume
+export MESOS_NATIVE_LIBRARY=/usr/local/lib/libmesos.so
+
 
 RUN="$SPARK_HOME/bin/spark-submit --class $MAIN --driver-memory $DRIVER_MEMORY
            --conf \"spark.executor.extraJavaOptions=$LOGGING_OPTS\"
