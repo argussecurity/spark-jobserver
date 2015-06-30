@@ -6,4 +6,4 @@ ADD bin/* /home/spark/job-server/
 ADD job-server/config/* /home/spark/job-server/
 ADD job-server/config/docker.conf /home/spark/job-server/settings.sh
 
-RUN /home/spark/job-server/server_start.sh attached
+CMD /home/spark/job-server/server_start.sh attached
