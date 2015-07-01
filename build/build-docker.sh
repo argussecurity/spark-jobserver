@@ -5,7 +5,7 @@ TAG=${1:-latest}
 
 IMAGE_PREFIX=argussecurity
 IMAGE_NAME=spark-jobserver
-BUILD_PROPERTIES_LOCATION=./build.properties
+BUILD_PROPERTIES_LOCATION=./job-server/config/build.properties
 
 script_dir="$( cd "$( dirname "$0" )" && pwd )"
 cd $script_dir/..
