@@ -57,7 +57,9 @@ if [ -z "$LOG_DIR" ]; then
 fi
 mkdir -p $LOG_DIR
 
-LOGGING_OPTS="-Dlog4j.configuration=file:$appdir/log4j-server.properties
+cp $appdir/log4j-server.properties $SPARK_HOME/conf/log4j-server.properties
+
+LOGGING_OPTS="-Dlog4j.configuration=file:$SPARK_HOME/conf/log4j-server.properties
               -DLOG_DIR=$LOG_DIR"
 
 # For Mesos
